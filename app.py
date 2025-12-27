@@ -34,5 +34,6 @@ review = st.text_area('Enter the Movie Review to classify it as Positive or Nega
 if st.button('Classify'):
     if len(review) == 0:
         st.write('Please enter a Movie Review!')
-    sentiment = predict_sentiment(review)
-    st.write(f'Movie Review Sentiment Prediction : {sentiment}')
+    else:
+        sentiment = predict_sentiment(review)
+        st.write(f'{sentiment} Review')
